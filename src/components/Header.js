@@ -1,21 +1,26 @@
 import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
-import cart from '.././icons/Cart.png';
-import instagram from '.././icons/Instagram.png';
-import tiktok from '.././icons/TikTok.png';
-import './Header.css'
-import '../index.css'
 
-function Header() {
+import logo from '.././assets/icons/Logo.png';
+import cart from '.././assets/icons/Cart.png';
+import instagram from '.././assets/icons/Instagram.png';
+import tiktok from '.././assets/icons/TikTok.png';
+
+import './Components.css'
+
+const Header = () => {
 
     return (
-        <header>
-            <div className='links'>
-                <div className = 'header-content'>
-                <ul>
-                    <li><NavLink to='/home'>home</NavLink></li>
-                    <li><NavLink to='/shop'>shop</NavLink></li>
-                </ul>
+        <header className='header-container'>
+            <div className = 'header-content'>
+                <div className='links'>
+                    <ul>
+                        <li><NavLink to='/home'>home</NavLink></li>
+                        <li><NavLink to='/shop'>shop</NavLink></li>
+                    </ul>
+                </div>
+                <div id='logo'>
+                    <NavLink to='/home'><img src={logo} alt='logo'/></NavLink>    
                 </div>
                 <div className='icons'>
                 <ul>
@@ -31,8 +36,8 @@ function Header() {
                     </li>
                     <li><NavLink to='/cart'><img src={cart} alt='cart'/></NavLink></li>
                 </ul>
-                </div>
-            </div>            
+                </div>    
+            </div>          
         </header>
     )
 }
