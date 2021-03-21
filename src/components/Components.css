@@ -1,5 +1,5 @@
 /* header container*/
-.header-container {
+.header {
   height: 100%;
   width: 100%;
   grid-row-start: 1;
@@ -32,13 +32,17 @@
   padding: 2vh;
 }
 
-/* icons */
+/* FontAwesome icons */
 .icons ul {
   display: flex;
   justify-content: flex-end;
 }
-.icons ul li {
+.icons a {
   padding: 1rem;
+}
+.icons svg {
+  font-size: 1.5em;
+  color: black;
 }
 
 /* logo */
@@ -55,7 +59,7 @@
 
 /* footer */
 
-.footer-container {
+.footer {
   grid-row-start: 3;
   grid-row-end: 3;
   height: 100%;
@@ -74,10 +78,19 @@
   .links a {
     font-size: 1.75rem;
   }
+
+  #logo img {
+    height: 4rem;
+  }
+
   .icons ul li {
     padding: 0.25rem;
   }
-  .icons img {
-    height: 6vmin;
+  .icons a {
+    padding: 0.3rem;
+  }
+  .icons svg {
+    font-size: 1.2em;
+    color: black;
   }
 }
