@@ -1,7 +1,5 @@
 /* shipping information */
 
-/* shipping page content */
-
 /* shipping page title */
 
 #shipping-title {
@@ -9,20 +7,73 @@
   -webkit-text-stroke: 0.001rem #ebadf9;
 }
 
+/* shipping page content */
+
 .shipping-content section {
   display: grid;
-  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-rows: auto 3fr;
   justify-content: center;
 }
 
-.shipping-content h2 {
-  padding: 3rem;
+/* shipping content text before the table */
+
+.shipping-text {
+  margin: 0;
+}
+.shipping-text h2 {
+  grid-row: 1;
+  margin: 3rem;
   font-size: 4rem;
   letter-spacing: 0.5rem;
 }
 
-.shipping-content p {
-  padding: 3rem 3rem 0rem;
+.shipping-text p {
+  grid-row: 1;
+  padding: 0rem 3rem;
   font-family: "Oswald", "sans-serif";
   font-size: 2rem;
+  font-weight: 300;
+}
+
+/* shipping rate table */
+
+#shipping-table {
+  margin: 3rem;
+  height: auto;
+  border: 0.2rem solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#shipping-table th,
+td {
+  padding: 1rem;
+  border: 0.2rem solid black;
+  font-family: "Oswald", "sans-serif";
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+#shipping-table th {
+  background-color: #e5e5e5;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .shipping-text h2 {
+    margin: 2rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  .shipping-text p {
+    padding: 0rem 2rem;
+    font-size: 1rem;
+  }
+  #shipping-table {
+    margin: 2rem;
+  }
+  #shipping-table th,
+  td {
+    font-size: 1rem;
+  }
 }

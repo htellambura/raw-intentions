@@ -9,12 +9,14 @@ const Shipping = () => {
                    <h1 id='shipping-title'>shipping</h1>
                </div>
                <section>
-                    <h2>for shipping information, please refer to the table below</h2>
-                    <p>* All prices are in CAD</p>
+                   <div className='shipping-text'>
+                        <h2>for shipping information, please refer to the table below</h2>
+                        <p>* All prices are in CAD</p>
+                   </div>
                     <table id="shipping-table"> {/* Add props if costs will change */}
                         <tr>
-                            <th>Location</th>
-                            <th>Standard Cost</th>
+                            <th>LOCATION</th>
+                            <th colSpan="2">STANDARD COST</th>
                         </tr>
                         <tr>
                             <td rowSpan="2">EDMONTON AREA</td>
