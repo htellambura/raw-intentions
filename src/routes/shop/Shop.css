@@ -1,0 +1,92 @@
+/* shop page */
+.shop {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+/* shop page title, links, sorting and filtering */
+.shop .links {
+  display: flex;
+  font-size: 3rem;
+  justify-content: space-around;
+  margin: 2rem 10rem 2rem 10rem; /* margin measurements go top right bottom left*/
+}
+
+#shop-title {
+  color: #cef792;
+  -webkit-text-stroke: 0.001rem #ebadf9;
+}
+
+/* displaying individual products in grid */
+.shop-products {
+  margin: 0rem 10rem 0rem 10rem;
+  text-align: center;
+}
+.shop-products ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shop-products li {
+  margin: 0rem 3rem 2rem 3rem;
+}
+.shop-product-image {
+  box-shadow: 1rem 1rem 0rem 0rem #ebadf9;
+  height: 20vw; /* implement dynamic sizing of product images */
+  margin-bottom: 1rem;
+  width: 15vw;
+}
+
+.shop-product-name {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.shop-product-price {
+  font-family: "Oswald";
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 768px) {
+  /* shop page */
+  .shop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* shop page title, links, sorting and filtering */
+  .shop .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    margin: 1rem; /* margin measurements go top right bottom left*/
+  }
+
+  /* displaying individual products in grid */
+  .shop-products {
+    margin: 0rem;
+    text-align: center;
+  }
+
+  .shop-products li {
+    margin: 0rem 1.5rem 2rem 1rem;
+  }
+  .shop-product-image {
+    box-shadow: 0.5rem 0.5rem 0rem 0rem #ebadf9;
+    height: 60vw;
+    margin-bottom: 1rem;
+    width: 37vw;
+  }
+
+  .shop-product-name {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .shop-product-price {
+    font-size: 1rem;
+  }
+}

@@ -16,14 +16,15 @@ body,
 
 .content {
   display: grid;
+  font-family: "Six Caps", sans-serif;
   grid-template-rows: 14.28% auto 14.28%;
   height: 100%;
   width: 100%;
-  font-family: "Six Caps", sans-serif;
 }
 
 /* universal style specifications */
 a {
+  color: black;
   text-decoration: none;
 }
 

@@ -15,12 +15,13 @@ import AboutUs from './routes/about-us/AboutUs';
 function App() {
     return (
         <div className='content'>
+            <title>raw intentions</title>
             <BrowserRouter>
                 <Header/>
                 <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route path='/shop' component={Shop}/>
-                    <Route path='/product' component={Product}/>
+                    <Route path='/product/:id' component={Product}/>
                     <Route path='/customs' component={Customs}/>
                     <Route path='/cart' component={Cart}/>
                     <Route path='/shipping' component={Shipping}/>

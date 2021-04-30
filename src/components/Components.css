@@ -1,27 +1,26 @@
 /* header container*/
 .header {
+  background-color: #b0cf94;
+  grid-row-end: 1;
+  grid-row-start: 1;
   height: 100%;
   width: 100%;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  background-color: #b0cf94;
 }
 
 .header-content {
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  overflow: auto;
+  width: 100%;
 }
 
 /* header content */
 
 /* links */
-.links a {
+.links {
   font-size: 2rem;
-  color: black;
 }
 
 .links ul {
@@ -41,15 +40,15 @@
   padding: 1rem;
 }
 .icons svg {
-  font-size: 1.5em;
   color: black;
+  font-size: 1.5em;
 }
 
 /* logo */
 
 #logo {
-  margin: auto;
   align-self: center;
+  margin: auto;
 }
 
 #logo img {
@@ -60,22 +59,22 @@
 /* footer */
 
 .footer {
-  grid-row-start: 3;
+  background-color: #b0cf94;
   grid-row-end: 3;
+  grid-row-start: 3;
   height: 100%;
   width: 100%;
-  background-color: #b0cf94;
 }
 
 .footer-content {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 768px) {
-  .links a {
+  .links {
     font-size: 1.75rem;
   }
 
@@ -90,7 +89,7 @@
     padding: 0.3rem;
   }
   .icons svg {
-    font-size: 1.2em;
     color: black;
+    font-size: 1.2em;
   }
 }

@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
-import {NavLink} from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import { INSTAGRAM, TIKTOK } from '../constants/Constants';
+import { INSTAGRAM, TIKTOK } from '../constants/constants';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTiktok, faInstagram } from '@fortawesome/free-brands-svg-icons';

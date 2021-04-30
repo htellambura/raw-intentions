@@ -8,7 +8,7 @@ const Footer = () => {
             <div className='footer-content'>
                 <div className='links'>
                     <ul>
-                        <li><NavLink to='/home'>home</NavLink></li>
+                        <li><NavLink to='/'>home</NavLink></li>
                         <li><NavLink to='/shop'>shop</NavLink></li>
                         <li><NavLink to='/customs'>customs</NavLink></li>
                         <li><NavLink to='/about-us'>about us</NavLink></li>

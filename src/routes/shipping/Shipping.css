@@ -59,6 +59,8 @@ td {
   font-weight: 500;
 }
 
+/* font changes for responsiveness */
+
 @media only screen and (max-width: 768px) {
   .shipping-text h2 {
     margin: 2rem;

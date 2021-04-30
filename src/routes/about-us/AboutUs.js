@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutUs.css'
-import {AboutUsParagraphs as Paragraphs} from '../../constants/Constants';
+import {AboutUsParagraphs as Paragraphs} from '../../constants/constants';
 
 const AboutUs = () => {
     return (
