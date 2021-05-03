@@ -109,7 +109,7 @@
 }
 
 .product-quantity input {
-  border: 0.2rem solid black;
+  border: 0.2rem solid #000000;
   border-radius: 0.3rem;
   font-family: "Oswald", "sans-serif";
   font-size: 1rem;
@@ -127,6 +127,10 @@
   font-size: 3rem;
   letter-spacing: 0.2rem;
   margin: 1rem 0rem 3.5rem 0rem;
+}
+
+.add-to-cart:hover {
+  background: #797979;
 }
 
 /* layout changes for smaller screens */
