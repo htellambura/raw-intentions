@@ -1,9 +1,11 @@
 /* shop page */
+
 .shop {
   display: grid;
   grid-template-rows: auto auto auto;
 }
 /* shop page title, links, sorting and filtering */
+
 .shop .links {
   display: flex;
   font-size: 3rem;
@@ -17,6 +19,7 @@
 }
 
 /* displaying individual products in grid */
+
 .shop-products {
   margin: 0rem 10rem 0rem 10rem;
   text-align: center;
@@ -24,7 +27,6 @@
 .shop-products ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .shop-products li {
@@ -50,12 +52,14 @@
 
 @media only screen and (max-width: 768px) {
   /* shop page */
+
   .shop {
     display: flex;
     flex-direction: column;
   }
 
   /* shop page title, links, sorting and filtering */
+
   .shop .links {
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +70,7 @@
   }
 
   /* displaying individual products in grid */
+
   .shop-products {
     margin: 0rem;
     text-align: center;

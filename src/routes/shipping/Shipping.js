@@ -19,15 +19,6 @@ const Shipping = () => {
                             <th colSpan="2">STANDARD COST</th>
                         </tr>
                         <tr>
-                            <td rowSpan="2">EDMONTON AREA</td>
-                            <td>PICK UP</td>
-                            <td>FREE</td>
-                        </tr>
-                        <tr>
-                            <td>DELIVERY</td>
-                            <td>$3</td> 
-                        </tr>
-                        <tr>
                             <td>CANADA</td>
                             <td colSpan="2">$4</td>
                         </tr>

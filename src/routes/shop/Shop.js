@@ -39,7 +39,7 @@ function Shop() {
                             products.map(product =>
                                     <li>
                                         <div className='shop-product'>
-                                            <NavLink to={'/product/' + product.id}>
+                                            <NavLink to={'/product/' + product._id}>
                                             <img className='shop-product-image' src={product.image} />
                                             </NavLink>
                                             <h2 className='shop-product-name'>{product.name}</h2>

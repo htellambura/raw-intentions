@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from './components/Header';
@@ -10,7 +9,7 @@ import Customs from './routes/customs/Customs';
 import Cart from './routes/cart/Cart';
 import Shipping from './routes/shipping/Shipping';
 import AboutUs from './routes/about-us/AboutUs';
-
+import Payment from './routes/payment/Payment';
 
 function App() {
     return (
@@ -23,7 +22,8 @@ function App() {
                     <Route path='/shop' component={Shop}/>
                     <Route path='/product/:id' component={Product}/>
                     <Route path='/customs' component={Customs}/>
-                    <Route path='/cart' component={Cart}/>
+                    <Route path='/cart/:id?' component={Cart}/>
+                    <Route path='/payment' component={Payment}/>
                     <Route path='/shipping' component={Shipping}/>
                     <Route path='/about-us' component={AboutUs}/>
                 </Switch>

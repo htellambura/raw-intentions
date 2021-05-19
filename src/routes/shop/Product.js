@@ -1,4 +1,4 @@
-import React,  { useEffect } from 'react';
+import React,  { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Message from '../../components/Message';
@@ -16,6 +16,14 @@ function Product(props) {
     useEffect(() => {
         dispatch(detailProduct(productID));
     }, [dispatch, productID]);
+
+
+    // get order information from user
+    const [quantity, setQuantity] = useState(1);
+    const addToCartHandler = () => {
+        props.history.push(`/cart/${productID}?qty=${quantity}`);
+    };
+
 
     return (
         <div>
@@ -41,7 +49,6 @@ function Product(props) {
             </div>
             <div className='product-description'>
                 <h1>description</h1>
-                <hr/>
                 <p>{product.description}</p>
                 <p className='disclaimer'>
                     * Any details to consider go here.
@@ -50,9 +57,10 @@ function Product(props) {
             <form className='product-add'>
                 <div className='product-quantity'>
                     <label for='product-quantity'>quantity</label>
-                    <input type='number' name='product-quantity' min='1' placeholder='QTY' required/>
+                    <input type='number' name='product-quantity' min='1' max='5' value={quantity} 
+                    onChange={e => setQuantity(e.target.value)} required/>
                 </div>
-                <input className='add-to-cart' type='submit' value='ADD TO CART'/>
+                <input className='add-to-cart' type='submit' value='ADD TO CART' onClick={addToCartHandler}/>
             </form>
         </div> 
         )}

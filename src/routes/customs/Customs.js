@@ -1,13 +1,11 @@
 import React from 'react';
 
-class Customs extends React.Component {
-    render() {
-        return (
-            <div className='customs'>
-                <p>Customs</p>
-            </div>
-        )
-    }
-}
+import Message from '../../components/Message';
 
-export default Customs;
+export default function Customs() {
+    return (
+        <div className='customs'>
+            <Message>COMING SOON!</Message>
+        </div>
+    )
+}
