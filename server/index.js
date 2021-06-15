@@ -3,6 +3,7 @@ dotenv.config();
 
 import express from "express";
 import mongoose from "mongoose";
+import path from "path";
 import orderRouter from "./routers/orderRouter.js";
 import productRouter from "./routers/productRouter.js";
 
@@ -29,7 +30,11 @@ app.get("/shop", (req, res) => {
 // API for all product data
 app.use("/api/products", productRouter);
 app.use("/api/products", orderRouter);
-
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/raw-intentions/build")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/raw-intentions/build/index.html"))
+);
 const port = process.env.PORT || 5000;
 
 // router error handler
