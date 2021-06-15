@@ -1,0 +1,85 @@
+/* home page */
+.home {
+  display: flex;
+  grid-row-end: 2;
+  grid-row-start: 2;
+}
+
+.home-content {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  width: 100%;
+}
+
+.home-content a {
+  /* adjust font for responsiveness */
+  font-size: 13rem;
+  letter-spacing: 0.5rem;
+}
+
+/* home page slideshow */
+
+.slideshow {
+  grid-row-end: 2;
+  grid-row-start: 1;
+}
+/* text on the slideshow */
+
+.slideshow a {
+  -webkit-text-stroke: 0.03em #000000;
+  color: #cef792;
+  font-size: 7em;
+  left: 70%;
+  position: absolute;
+  top: 40%;
+}
+
+/* home page links to products*/
+
+.home-links {
+  background-color: #000000;
+  grid-row-end: 3;
+  grid-row-start: 2;
+  width: 100%;
+}
+
+.home-links ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#earrings-link {
+  color: #77bb79;
+  -webkit-text-stroke: 0.02em #cef792;
+}
+
+#necklaces-link {
+  color: #ebadf9;
+  -webkit-text-stroke: 0.02em #cef792;
+}
+
+#rings-link {
+  color: #cef792;
+  -webkit-text-stroke: 0.02em #7dde82;
+}
+
+@media only screen and (max-width: 768px) {
+  .home-content a {
+    font-size: 5rem;
+    letter-spacing: 0.02rem;
+  }
+  .slideshow a {
+    left: 50%;
+    top: 35%;
+  }
+  .home-links ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .home-links a {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+  }
+}

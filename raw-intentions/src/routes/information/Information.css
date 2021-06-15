@@ -1,0 +1,294 @@
+/* faq, contact us and about us pages */
+
+/* main title */
+
+.title {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: 11rem;
+  letter-spacing: 0.5rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* special colours for titles */
+
+#title-1 {
+  color: #415a42;
+}
+
+#title-2 {
+  color: #d58be8;
+}
+
+#title-3 {
+  color: #b1d380;
+}
+
+#title-4 {
+  color: #949494;
+}
+
+/* information class for all pages */
+
+.information section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem 0rem;
+}
+
+.information section > * {
+  max-width: 80%;
+}
+
+.information a {
+  color: #7dde82;
+}
+
+/* information paragraphs */
+
+.info-pg {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.info-pg h2 {
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.info-pg h3 {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.info-pg p,
+.info-pg li {
+  font-family: "Oswald", "sans-serif";
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1rem;
+  list-style-position: inside;
+}
+
+.info-pg ul {
+  list-style-type: initial;
+}
+
+/* about us page */
+
+.about-us {
+  height: 100%;
+  width: 100%;
+}
+
+/* about us title */
+
+#about-us-title {
+  -webkit-text-stroke: 0.001rem #77bb79;
+  color: #cef792;
+}
+
+/* about us page content */
+
+.about-us-content {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+/* contact us page */
+
+#contact-us-title {
+  -webkit-text-stroke: 0.001rem #cef792;
+  color: #77bb79;
+}
+
+/* contact us page content */
+
+.contact-us-content {
+  align-items: center;
+}
+
+/* faq page */
+
+#faq-title {
+  -webkit-text-stroke: 0.001rem #cef792;
+  color: #ebadf9;
+}
+
+/* faq page content */
+
+.faq-content section {
+  width: 70%;
+  margin: auto;
+}
+
+.faq-question {
+  border-top: 1px solid #000000;
+  width: 100%;
+  text-align: left;
+}
+
+.faq-question:last-child {
+  border-bottom: 1px solid #000000;
+}
+
+.faq-content .info-pg {
+  width: 100%;
+}
+
+.faq-content .info-pg h2 {
+  align-self: flex-start;
+  margin-top: 2rem;
+}
+
+.faq-content .info-pg h3 {
+  font-family: "Oswald";
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0rem;
+  padding: 0.5rem 0rem;
+  text-transform: none;
+}
+
+.faq-content .info-pg p {
+  font-size: 1.2rem;
+  padding: 1rem 0rem;
+}
+
+.faq-content .info-pg li {
+  font-size: 1.2rem;
+  padding: 0.5rem 0rem;
+}
+
+.faq-content .info-pg:last-child {
+  margin-bottom: 5rem;
+}
+
+/* shipping page */
+
+/* shipping page title */
+
+#shipping-title {
+  color: #cef792;
+  -webkit-text-stroke: 0.001rem #ebadf9;
+}
+
+/* shipping page content */
+
+/* shipping content text before the table */
+
+.shipping-content {
+  margin: 0;
+}
+.shipping-content h2 {
+  margin: 3rem;
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+}
+.shipping-text p {
+  padding: 0rem 3rem;
+  font-family: "Oswald", "sans-serif";
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* shipping rate table */
+
+#shipping-table {
+  margin: 3rem;
+  height: auto;
+  border: 0.2rem solid black;
+  border-collapse: collapse;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#shipping-table th,
+#shipping-table td {
+  padding: 1rem;
+  border: 0.2rem solid #000000;
+  font-family: "Oswald", "sans-serif";
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+#shipping-table th {
+  background-color: #e5e5e5;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  /* faq, contact us and about us pages */
+
+  .title h1 {
+    font-size: 5rem;
+  }
+
+  .information section * {
+    max-width: 90%;
+  }
+
+  .info-pg h2 {
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .info-pg h3 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .info-pg p {
+    font-size: 1.3rem;
+  }
+
+  /* shipping page */
+
+  .shipping-text h2 {
+    margin: 2rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .shipping-text p {
+    padding: 0rem 2rem;
+    font-size: 1rem;
+  }
+
+  #shipping-table {
+    margin: 2rem;
+  }
+
+  #shipping-table th,
+  #shipping-table td {
+    font-size: 1.1rem;
+  }
+
+  /* faq page */
+
+  .faq section * {
+    max-width: none;
+  }
+
+  .faq-content section {
+    width: 90vw;
+  }
+
+  .faq-content .info-pg h3 {
+    font-size: 1.3rem;
+  }
+}

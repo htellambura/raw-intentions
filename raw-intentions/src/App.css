@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: auto;
+}
+
+.content {
+  display: grid;
+  font-family: "Six Caps", sans-serif;
+  grid-template-rows: 14.28vh auto 14.28vh;
+  height: 100%;
+  width: 100%;
+}
+
+/* universal style specifications */
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  background: none;
+  border: none;
+  bottom: 0;
+  cursor: pointer;
+  padding: 0;
+  text-align: end;
+}

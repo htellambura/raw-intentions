@@ -1,0 +1,391 @@
+/* checkout pages */
+
+/* main title */
+
+.checkout {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.checkout h1 {
+  color: #415a42;
+  font-size: 2.5rem;
+  grid-column-end: 3;
+  grid-column-start: 1;
+  justify-self: center;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0rem 3rem;
+  text-transform: uppercase;
+}
+
+.checkout button {
+  color: inherit;
+  font-family: "Six Caps";
+  font-size: 2rem;
+  grid-column-end: 3;
+  grid-column-start: 1;
+  margin: 2rem;
+  outline: inherit;
+  padding: 0rem;
+  text-align: center;
+}
+
+.checkout h3 {
+  color: #1e281e;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.checkout h3:hover {
+  color: #b1d380;
+}
+
+/* first step of checkout: shipping info form */
+
+/* shipping info form page */
+
+.shipping-info {
+  display: flex;
+  justify-content: center;
+}
+
+.shipping-info-form {
+  background-color: #dedede;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(1fr, 8);
+  margin: 3rem 0rem;
+  padding: 2rem;
+  width: 65vw;
+}
+
+/* shipping info form content */
+
+.shipping-info-form input,
+select {
+  padding: 1rem;
+  margin: 1rem;
+  border: none;
+  font-family: "Oswald";
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+/* individual form field positioning */
+
+#shipping-first-name {
+  grid-column: 1;
+}
+
+#shipping-last-name {
+  grid-column: 2;
+}
+
+#shipping-email {
+  grid-column-end: 3;
+  grid-column-start: 1;
+}
+
+#shipping-street-address {
+  grid-column: 1;
+}
+
+#shipping-apt-suite {
+  grid-column: 2;
+}
+
+#shipping-country {
+  grid-column: 1;
+}
+
+#shipping-state {
+  grid-column: 2;
+}
+
+#shipping-city {
+  grid-column: 1;
+}
+
+#shipping-postal-code {
+  grid-column: 2;
+}
+
+#shipping-phone-number {
+  grid-column-end: 3;
+  grid-column-start: 1;
+}
+
+/* second step of checkout: confirmation */
+
+.confirmation {
+  width: 65vw;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* confirmation page section for user's shipping info */
+
+.confirmation-shipping-info {
+  background-color: #dedede;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  text-transform: uppercase;
+}
+
+.confirmation-shipping-info h2 {
+  font-size: 1.9rem;
+  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-row: 1;
+  letter-spacing: 0.1rem;
+  margin: 0.5rem;
+}
+
+.confirmation-edit-info {
+  color: #616161;
+  font-family: "Oswald";
+  font-size: 1.1rem;
+  font-weight: 300;
+  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-row: 1;
+  justify-self: right;
+  margin: 0.7rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.confirmation-shipping-info table {
+  font-size: 1.1rem;
+  margin: 0rem 1rem 1rem 1rem;
+}
+
+.confirmation-form-info {
+  font-family: "Oswald";
+}
+
+.confirmation-form-info tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmation-form-info td {
+  font-weight: 300;
+  margin: 0.2rem;
+}
+
+/* confirmation page info about items */
+
+.confirmation-cart-info {
+  display: grid;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+}
+
+.confirmation .cart-items {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-top: 1rem;
+}
+
+.confirmation .cart-item {
+  grid-template-rows: 1fr;
+}
+
+.cart-item-price {
+  grid-column: 2;
+  margin: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cart-item-price h2 {
+  align-self: flex-end;
+}
+
+.cart-item-price a {
+  margin: 0rem;
+  padding: 0rem;
+  justify-self: auto;
+}
+
+/* confirmation page info about cart */
+
+.confirmation .cart-summary {
+  margin: 1rem 0rem 1rem 0rem;
+  width: auto;
+}
+
+.confirmation .cart-summary h2 {
+  font-size: 1.9rem;
+}
+
+.confirmation .cart-summary-details {
+  font-size: 1.2rem;
+}
+
+.confirmation button {
+  grid-column: 1;
+  text-align: center;
+  font-family: "Six Caps";
+  margin: 3rem;
+}
+
+/* third step of checkout: payment */
+
+/* payment information page */
+
+.payment {
+  background-color: #dedede;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 1rem;
+  text-align: left;
+  width: 45vw;
+}
+.payment h1 {
+  align-self: center;
+}
+
+.payment-info {
+  background-color: #ffffff;
+  font-family: "Oswald";
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.e-transfer-question {
+  text-align: center;
+  margin: 1rem;
+  color: #7dde82;
+}
+.payment-info span {
+  background-color: #f3f3f3;
+}
+.payment-info li {
+  margin: 1rem 1rem 1rem 2rem;
+}
+
+.payment-info .disclaimer {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout h1 {
+    font-size: 2rem;
+    margin: 1.5rem 0rem 1.5rem;
+  }
+
+  .checkout h3 {
+    font-size: 2rem;
+  }
+
+  .shipping-info {
+    width: 100%;
+  }
+
+  .shipping-info-form {
+    grid-template-columns: 100%;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  /* shipping info form content */
+
+  .shipping-info-form h1 {
+    font-size: 2rem;
+    margin: 1rem 0rem 2rem;
+  }
+
+  .shipping-info-form button {
+    margin: 1.5rem 0rem 1rem;
+  }
+
+  .shipping-info-form h3 {
+    font-size: 1.75rem;
+  }
+
+  /* individual form field styling */
+
+  .shipping-info-form input,
+  .shipping-info-form select {
+    margin: 0.7rem;
+    padding: 0.8rem;
+  }
+
+  .shipping-info-form .shipping-info-form h1,
+  .shipping-info-form h3,
+  #shipping-apt-suite,
+  #shipping-email,
+  #shipping-last-name,
+  #shipping-phone-number,
+  #shipping-postal-code,
+  #shipping-state {
+    grid-column: 1;
+  }
+
+  .confirmation {
+    width: 100vw;
+  }
+
+  .confirmation-shipping-info {
+    grid-template-columns: 1fr;
+    margin: 0rem 1rem 0rem 1rem;
+    padding: 1rem 0rem 1rem 0rem;
+    width: auto;
+  }
+  .confirmation-edit-info {
+    margin: 0rem;
+    padding-right: 1rem;
+  }
+  .confirmation-shipping-info h2 {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+
+  .confirmation-shipping-info > * {
+    grid-column: 1;
+  }
+
+  .confirmation-shipping-info table {
+    font-size: 1rem;
+    grid-column: 1;
+    margin-bottom: 0rem;
+  }
+
+  .confirmation-cart-info {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
+
+  .confirmation .cart-item {
+    font-size: 0.8rem;
+    width: auto;
+  }
+
+  .confirmation .cart-item h2 {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .confirmation .cart-summary {
+    margin: 1rem;
+    width: auto;
+  }
+
+  .confirmation .cart-summary-details {
+    font-size: 1.1rem;
+    padding: 0.7rem;
+  }
+}
