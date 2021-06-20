@@ -9,17 +9,17 @@ import { listProducts } from "../../actions/productActions";
 import Filter from "../../components/Filter";
 import Sort from "../../components/Sort";
 
-function Shop() {
+function Shop(props) {
   // get product data from backend
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
   const { error, products } = productList;
 
-  const [filteredProducts, setFilteredProducts] = useState(products);
-
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
+
+  const [filteredProducts, setFilteredProducts] = useState(products);
 
   return (
     <div>
@@ -30,21 +30,26 @@ function Shop() {
           <div className="title">
             <h1 id="shop-title">shop</h1>
           </div>
-          <nav className="links">
-            <Filter
+          <nav>
+            {/* <Filter
+              collection={props.match.params.collection}
               products={products}
               setFilteredProducts={setFilteredProducts}
             />
-            <NavLink to="/">new</NavLink>
-            {/* implement filtered links here*/}
-            <NavLink to="/">necklaces</NavLink>
-            <NavLink to="/">rings</NavLink>
-            <NavLink to="/">earrings</NavLink>
-            <Sort sort="true" />
+            <div className="links">
+              <NavLink to="/shop/new">new</NavLink>
+              <NavLink to="/shop/necklaces">necklaces</NavLink>
+              <NavLink to="/shop/rings">rings</NavLink>
+              <NavLink to="/shop/earrings">earrings</NavLink>
+            </div>
+            <Sort
+              products={products}
+              setFilteredProducts={setFilteredProducts}
+            /> */}
           </nav>
           <div className="shop-products">
             <ul>
-              {filteredProducts.map((product) => (
+              {products.map((product) => (
                 <li>
                   <div className="shop-product">
                     <NavLink to={"/product/" + product._id}>

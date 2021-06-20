@@ -1,3 +1,5 @@
+@import "react-slideshow-image/dist/styles.css";
+
 /* header container*/
 .header {
   background-color: #b0cf94;
@@ -160,11 +162,77 @@
 
 /* filter component */
 
+.filter {
+  position: relative;
+}
+
+.filter-active {
+  position: relative;
+}
+
+.filter .filter-form {
+  display: none;
+}
+
+.filter-active .filter-title button {
+  transform: rotateZ(-90deg);
+  transition: all 0.2s ease;
+}
+
 .filter-title {
+  display: flex;
+  background-color: #cef792;
+  justify-content: space-between;
+  margin: 2rem;
+  border: 0.3rem solid #ebaefa;
+  border-radius: 0.5rem;
 }
 
 .filter-title h2 {
   text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #ebaefa;
+  margin-left: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.filter-title .fa-3x {
+  font-size: 3.5rem;
+  color: #ebaefa;
+}
+
+.filter-title .svg-inline--fa.fa-w-6 {
+  width: 1em;
+}
+
+.filter-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.filter-option {
+  font-family: "Oswald";
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* slideshow component */
+.slide-container {
+  width: 40vw;
+  height: auto;
+  margin: 5rem;
+}
+
+.each-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  display: block;
 }
 
 @media only screen and (max-width: 768px) {
@@ -200,5 +268,20 @@
 
   .message h1 {
     font-size: 2rem;
+  }
+
+  .slide-container {
+    width: 100vw;
+    height: auto;
+    margin: 0rem;
+  }
+
+  .each-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    display: block;
   }
 }

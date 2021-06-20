@@ -7,6 +7,7 @@ import Message from "../../components/Message";
 export default function Confirmation(props) {
   const cart = useSelector((state) => state.cart);
   const { cartItems, shippingInfo } = cart;
+
   const totalQuantity = (obj) =>
     Object.values(obj).reduce((a, b) => a + b.quantity, 0);
   const totalPrice = (obj) =>
@@ -114,7 +115,7 @@ export default function Confirmation(props) {
                     <h2>
                       {item.name} - {item.type}
                     </h2>
-                    <p>SIZE</p> {/* implement size calculation */}
+                    <p>SIZE {item.size}</p>
                     <p>
                       ${item.price.toFixed(2)} X {item.quantity}
                     </p>

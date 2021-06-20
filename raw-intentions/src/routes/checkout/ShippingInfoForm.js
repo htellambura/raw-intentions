@@ -22,11 +22,12 @@ export default function ShippingInfoForm(props) {
   const [city, setCity] = useState(shippingInfo.city);
   const [postalCode, setPostalCode] = useState(shippingInfo.postalCode);
   const [phoneNumber, setPhoneNumber] = useState(shippingInfo.phoneNumber);
-
-  const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-  const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-  const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
-
+  const [specialRequests, setSpecialRequests] = useState(
+    shippingInfo.specialRequests
+  );
+  const [orderId, setOrderId] = useState(
+    Math.floor(Math.random() * 90000) + 10000
+  );
   const [text, setText] = useState("");
 
   const dispatch = useDispatch();
@@ -44,6 +45,8 @@ export default function ShippingInfoForm(props) {
         city,
         postalCode,
         phoneNumber,
+        specialRequests,
+        orderId,
       })
     );
 
@@ -146,6 +149,12 @@ export default function ShippingInfoForm(props) {
           placeholder="Phone"
           type="tel"
           value={phoneNumber}
+        />
+        <textarea
+          id="shipping-special-requests"
+          onChange={(e) => setSpecialRequests(e.target.value)}
+          placeholder="Special Requests"
+          value={specialRequests}
         />
         <button
           type="submit"

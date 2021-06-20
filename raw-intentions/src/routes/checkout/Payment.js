@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 export default function Payment() {
   const cart = useSelector((state) => state.cart);
-  const { cartItems } = cart;
+  const { cartItems, shippingInfo } = cart;
   const totalPrice = (obj) =>
     Object.values(obj).reduce((a, b) => a + b.quantity * b.price, 0);
 
@@ -26,7 +26,8 @@ export default function Payment() {
                 ? "0.00"
                 : totalPrice(cartItems).toFixed(2)}
             </span>{" "}
-            with your order number <span>#####</span> in the message.{" "}
+            with your order number <span>{shippingInfo.orderId}</span> in the
+            message.{" "}
             <strong>
               E-Transfers without an order number will not be processed.
             </strong>

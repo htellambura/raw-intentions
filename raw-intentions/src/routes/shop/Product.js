@@ -7,6 +7,7 @@ import Popup from "../../components/Popup";
 import "./Product.css";
 import { detailProduct } from "../../actions/productActions";
 
+import { SIZES } from "../../constants/constants";
 import SIZE_CHART_IMAGE from "../../assets/size-chart.png";
 
 function Product(props) {
@@ -22,8 +23,9 @@ function Product(props) {
 
   // get order information from user
   const [quantity, setQuantity] = useState(1);
+  const [size, setSize] = useState("size");
   const addToCartHandler = () => {
-    props.history.push(`/cart/${productID}?qty=${quantity}`);
+    props.history.push(`/cart/${productID}?qty=${quantity}&size=${size}`);
   };
 
   // toggle popup widget for size chart
@@ -47,9 +49,18 @@ function Product(props) {
             <h3>${product.price}</h3>
           </div>
           <div className="product-size">
-            <select className="ring-size">
-              <option value="SIZE">SIZE</option>{" "}
-              {/* FILL IN OPTIONS DYNAMICALLY */}
+            <select
+              className="ring-size"
+              onChange={(e) => setSize(e.target.value)}
+            >
+              <option value="SIZE" disabled selected>
+                SIZE
+              </option>{" "}
+              {SIZES[product.category].map((size) => (
+                <option key={size} value={size}>
+                  {size}
+                </option>
+              ))}
             </select>
           </div>
           <div className="product-description">
@@ -75,7 +86,7 @@ function Product(props) {
                 type="number"
                 name="product-quantity"
                 min="1"
-                max="5"
+                max="20"
                 value={quantity}
                 onChange={(e) => setQuantity(e.target.value)}
                 required

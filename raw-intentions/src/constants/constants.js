@@ -84,8 +84,22 @@ export const CONTACT_US = {
   instagram: "DM us on Instagram @rawintentions.co",
 };
 
+// sorting options
+export const SORT_OPTIONS = {
+  highest: "highest to lowest",
+  lowest: "lowest to highest",
+};
+
 // sizes for products
 
+export const SIZES = {
+  rings: [
+    3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5,
+    12, 12.5, 13, 13.5,
+  ],
+  earrings: ["O/S"],
+  necklaces: ['16"', '18"', '20"', '22"'],
+};
 // countries and respective provinces/states
 
 export const COUNTRIES = {

@@ -1,20 +1,27 @@
 import React from "react";
-import SimpleImageSlider from "react-simple-image-slider";
-import Gold from ".././assets/slideshow/Gold.jpg";
-import GoldNecklace from ".././assets/slideshow/GoldNecklace.jpg";
+import { Slide } from "react-slideshow-image";
+import Neutrals from ".././assets/slideshow/neutrals.png";
+import Basics from ".././assets/slideshow/basics.png";
+import Summer from ".././assets/slideshow/welcome-to-summer.png";
 
-const images = [{ url: Gold }, { url: GoldNecklace }];
-
+const images = [Neutrals, Basics, Summer];
+const properties = {
+  duration: 4000,
+  transitionDuration: 700,
+  infinite: true,
+  arrows: false,
+  pauseOnHover: true,
+};
 const Slideshow = () => {
   return (
-    <div>
-      <SimpleImageSlider
-        width={"100vw"}
-        height={"42.8%"}
-        images={images}
-        slideDuration={0.1}
-        showBullets={true}
-      />
+    <div className="slide-container">
+      <Slide {...properties}>
+        {images.map((image) => (
+          <div className="each-slide">
+            <img src={image}></img>
+          </div>
+        ))}
+      </Slide>
     </div>
   );
 };

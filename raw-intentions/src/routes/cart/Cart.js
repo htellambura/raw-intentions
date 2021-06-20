@@ -10,17 +10,17 @@ import "./Cart.css";
 export default function Cart(props) {
   const dispatch = useDispatch();
   const productID = props.match.params.id;
-  const quantity = props.location.search
-    ? Number(props.location.search.split("=")[1])
-    : 1;
+  const params = new URLSearchParams(props.location.search);
+  const quantity = props.location.search ? Number(params.get("qty")) : 1;
+  const size = props.location.search ? params.get("size") : "O/S";
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   useEffect(() => {
     if (productID) {
-      dispatch(addToCart(productID, quantity));
+      dispatch(addToCart(productID, quantity, size));
     }
-  }, [dispatch, productID, quantity]);
+  }, [dispatch, productID, quantity, size]);
 
   const removeItemFromCart = (productID) => {
     dispatch(removeFromCart(productID));
@@ -51,7 +51,7 @@ export default function Cart(props) {
                       <h2>
                         {item.name} - {item.type}
                       </h2>
-                      <p>SIZE</p> {/* implement size calculation */}
+                      <p>SIZE {item.size}</p>
                       <p>${item.price.toFixed(2)}</p>
                     </div>
                   </NavLink>

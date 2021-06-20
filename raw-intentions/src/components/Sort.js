@@ -1,21 +1,39 @@
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { SORT_OPTIONS } from "../constants/constants";
 
 export default function Sort(props) {
   const [isOpen, setOpen] = useState(false);
-  const [allTags, setAllTags] = useState(new Set());
+  const [sortOption, setSortOption] = useState("highest");
 
   const handleClick = () => {
     setOpen(!isOpen);
-    getAllTags(props.products);
   };
 
-  const getAllTags = (products) => {
-    products.forEach((product) => {
-      var tags = product.tags.split(",");
-      tags.forEach((tag) => setAllTags(allTags.add(tag)));
-    });
+  const sortProducts = (e) => {
+    e.preventDefault();
+    var filteredProducts = props.products;
+    alert(sortOption);
+    console.log(filteredProducts);
+    switch (sortOption) {
+      case "highest":
+        filteredProducts.sort((a, b) => {
+          return b.price - a.price;
+        });
+        break;
+      case "lowest":
+        filteredProducts.sort((a, b) => {
+          return a.price - b.price;
+        });
+        break;
+      default:
+        filteredProducts.sort((a, b) => {
+          return a._id > b._id;
+        });
+    }
+    console.log(filteredProducts);
+    props.setFilteredProducts(filteredProducts);
   };
 
   return (
@@ -26,14 +44,25 @@ export default function Sort(props) {
           <FontAwesomeIcon icon={faCaretLeft} className="fa-3x" />
         </button>
       </div>
-      <form className="filter-form">
-        {console.log(allTags)}
-        {[...allTags].map((tag) => (
-          <React.Fragment>
-            <input type="checkbox" id={tag} key={tag} value={tag} />
-            <label htmlFor={tag}>{tag}</label>
-          </React.Fragment>
+      <form className="filter-form" onSubmit={sortProducts}>
+        {Object.keys(SORT_OPTIONS).map((tag) => (
+          <div className="sort-option">
+            <input
+              type="radio"
+              id={tag}
+              key={tag}
+              value={tag}
+              checked={sortOption === tag}
+              onChange={(e) => {
+                setSortOption(e.target.value);
+              }}
+            />
+            <label htmlFor={tag}>{SORT_OPTIONS[tag]}</label>
+          </div>
         ))}
+        <button type="submit">
+          <h3>Sort</h3>
+        </button>
       </form>
     </div>
   );

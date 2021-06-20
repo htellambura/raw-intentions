@@ -3,13 +3,19 @@
 .shop {
   display: grid;
   grid-template-rows: auto auto auto;
+  width: 100%;
+  margin: auto;
 }
 /* shop page title, links, sorting and filtering */
+.shop nav {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
 
 .shop .links {
   display: flex;
   font-size: 3rem;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 2rem 10rem 2rem 10rem; /* margin measurements go top right bottom left*/
 }
 
@@ -23,6 +29,7 @@
 .shop-products {
   margin: 0rem 10rem 0rem 10rem;
   text-align: center;
+  z-index: 1;
 }
 .shop-products ul {
   display: flex;
@@ -30,7 +37,7 @@
 }
 
 .shop-products li {
-  margin: 0rem 3rem 2rem 3rem;
+  margin: 3rem 3rem 2rem 3rem;
 }
 .shop-product-image {
   box-shadow: 1rem 1rem 0rem 0rem #ebadf9;
@@ -78,6 +85,10 @@
 
   .shop-products li {
     margin: 0rem 1.5rem 2rem 1rem;
+  }
+  .shop-products ul:first-child,
+  .shop-products ul:nth-child(2) {
+    margin-top: 2rem;
   }
   .shop-product-image {
     box-shadow: 0.5rem 0.5rem 0rem 0rem #ebadf9;

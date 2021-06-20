@@ -4,7 +4,10 @@ import React, { useState } from "react";
 
 export default function Filter(props) {
   const [isOpen, setOpen] = useState(false);
-  const [allTags, setAllTags] = useState(new Set());
+  const [allTags, setAllTags] = useState(
+    props.collection ? new Set([props.collection]) : new Set()
+  );
+  console.log(allTags);
   const [currentTags, setCurrentTags] = useState([]);
 
   const handleClick = () => {
@@ -24,9 +27,9 @@ export default function Filter(props) {
     var filteredProducts = props.products.filter((product) => {
       var tags = product.tags.split(",");
       console.log(currentTags);
-      return currentTags.every((tag) => tags.includes(tag));
+      return currentTags.some((tag) => tags.includes(tag));
     });
-    console.log(filteredProducts);
+    //console.log(filteredProducts);
     props.setFilteredProducts(filteredProducts);
   };
 
@@ -47,9 +50,9 @@ export default function Filter(props) {
           <FontAwesomeIcon icon={faCaretLeft} className="fa-3x" />
         </button>
       </div>
-      <form className="filter-form" onSubmit={filterProducts}>
+      <form className="filter-form" onSubmit={filterProducts} id="filter-form">
         {[...allTags].map((tag) => (
-          <React.Fragment>
+          <div className="filter-option">
             <input
               type="checkbox"
               id={tag}
@@ -58,7 +61,7 @@ export default function Filter(props) {
               onChange={(e) => changeCurrentTags(e.target.value)}
             />
             <label htmlFor={tag}>{tag}</label>
-          </React.Fragment>
+          </div>
         ))}
         <button type="submit">
           <h3>Filter</h3>

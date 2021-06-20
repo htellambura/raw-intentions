@@ -63,14 +63,16 @@
 /* shipping info form content */
 
 .shipping-info-form input,
-select {
-  padding: 1rem;
-  margin: 1rem;
+.shipping-info-form select,
+.shipping-info-form textarea {
   border: none;
   font-family: "Oswald";
-  font-weight: 300;
-  text-transform: uppercase;
   font-size: 1rem;
+  font-weight: 300;
+  margin: 1rem;
+  padding: 1rem;
+  resize: vertical;
+  text-transform: uppercase;
 }
 
 /* individual form field positioning */
@@ -117,6 +119,10 @@ select {
   grid-column-start: 1;
 }
 
+#shipping-special-requests {
+  grid-column-end: 3;
+  grid-column-start: 1;
+}
 /* second step of checkout: confirmation */
 
 .confirmation {
@@ -332,8 +338,13 @@ select {
   #shipping-last-name,
   #shipping-phone-number,
   #shipping-postal-code,
-  #shipping-state {
+  #shipping-state,
+  #shipping-special-requests {
     grid-column: 1;
+  }
+
+  #shipping-special-requests {
+    margin: 0.7rem;
   }
 
   .confirmation {
