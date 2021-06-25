@@ -17,14 +17,6 @@ mongoose.connect(
   }
 );
 
-app.get("/home", (req, res) => {
-  res.send("Home!");
-});
-
-app.get("/shop", (req, res) => {
-  res.send("Shop!");
-});
-
 // simple API for product data
 
 // API for all product data
