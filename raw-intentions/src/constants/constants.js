@@ -99,6 +99,7 @@ export const SIZES = {
   ],
   earrings: ["O/S"],
   necklaces: ['16"', '18"', '20"', '22"'],
+  bracelets: ["O/S"],
 };
 // countries and respective provinces/states
 

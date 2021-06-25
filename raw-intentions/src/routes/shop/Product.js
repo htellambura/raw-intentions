@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Prompt } from "react-router-dom";
 
 import Message from "../../components/Message";
 import Popup from "../../components/Popup";
@@ -23,7 +24,7 @@ function Product(props) {
 
   // get order information from user
   const [quantity, setQuantity] = useState(1);
-  const [size, setSize] = useState("size");
+  const [size, setSize] = useState("");
   const addToCartHandler = () => {
     props.history.push(`/cart/${productID}?qty=${quantity}&size=${size}`);
   };
@@ -48,25 +49,40 @@ function Product(props) {
             <h2>{product.type}</h2>
             <h3>${product.price}</h3>
           </div>
-          <div className="product-size">
+          <form className="product-size">
+            <Prompt when={size == ""} message={"Please select a size"} />
             <select
               className="ring-size"
               onChange={(e) => setSize(e.target.value)}
+              type="submit"
             >
-              <option value="SIZE" disabled selected>
+              <option value="" disabled selected>
                 SIZE
               </option>{" "}
-              {SIZES[product.category].map((size) => (
-                <option key={size} value={size}>
-                  {size}
+              {product.category ? (
+                SIZES[product.category].map((size) => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))
+              ) : (
+                <option key="O/S" value="O/S">
+                  O/S
                 </option>
-              ))}
+              )}
             </select>
-          </div>
+          </form>
           <div className="product-description">
             <h1>description</h1>
             <p>{product.description}</p>
-            <p className="disclaimer">* Any details to consider go here.</p>
+            <br></br>
+            <p>
+              <i>
+                if you find technical difficulties or have special requests,
+                please let us know in the shipping information form when
+                checking out
+              </i>
+            </p>
             <button
               id="size-chart"
               onClick={() => {

@@ -37,16 +37,18 @@
 }
 
 .shop-products li {
-  margin: 3rem 3rem 2rem 3rem;
+  margin: 2.3rem;
+  flex: 16%;
 }
 .shop-product-image {
   box-shadow: 1rem 1rem 0rem 0rem #ebadf9;
-  height: 20vw; /* implement dynamic sizing of product images */
+  height: auto; /* implement dynamic sizing of product images */
   margin-bottom: 1rem;
   width: 15vw;
 }
 
 .shop-product-name {
+  text-transform: uppercase;
   font-size: 2.5rem;
   letter-spacing: 0.1rem;
 }
@@ -92,9 +94,9 @@
   }
   .shop-product-image {
     box-shadow: 0.5rem 0.5rem 0rem 0rem #ebadf9;
-    height: 60vw;
+    height: auto;
     margin-bottom: 1rem;
-    width: 37vw;
+    width: 65vw;
   }
 
   .shop-product-name {
@@ -103,6 +105,6 @@
   }
 
   .shop-product-price {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }

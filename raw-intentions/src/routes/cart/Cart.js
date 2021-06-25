@@ -60,10 +60,12 @@ export default function Cart(props) {
                     type="number"
                     name="product-quantity"
                     min="1"
-                    max="5"
+                    max="15"
                     value={item.quantity}
                     onChange={(e) =>
-                      dispatch(addToCart(item.product, Number(e.target.value)))
+                      dispatch(
+                        addToCart(item.product, Number(e.target.value), size)
+                      )
                     }
                     required
                   />

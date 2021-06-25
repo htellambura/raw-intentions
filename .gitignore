@@ -26,5 +26,9 @@ package-lock.json
 !/raw-intentions/src/assets/slideshow
 /raw-intentions/src/assets/*.jpg
 
+# SSL
 
+server.csr
+server.key
+server.pass.key
 
