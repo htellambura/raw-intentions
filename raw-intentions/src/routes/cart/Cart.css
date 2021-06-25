@@ -199,6 +199,7 @@
     height: 100%;
     margin: 1rem;
     width: auto;
+    height: 50vh;
   }
 
   .cart-summary h2 {
