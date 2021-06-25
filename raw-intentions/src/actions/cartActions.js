@@ -29,10 +29,10 @@ export const addToCart =
     );
   };
 
-export const removeFromCart = (productID) => (dispatch, getState) => {
+export const removeFromCart = (productID, size) => (dispatch, getState) => {
   dispatch({
     type: CART_REMOVE_ITEM,
-    payload: productID,
+    payload: { productID: productID, size: size },
   });
   localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };

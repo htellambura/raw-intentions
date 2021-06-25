@@ -17,7 +17,7 @@ export default function ShippingInfoForm(props) {
     shippingInfo.streetAddress
   );
   const [aptSuite, setAptSuite] = useState(shippingInfo.aptSuite);
-  const [country, setCountry] = useState(shippingInfo.country);
+  const [country, setCountry] = useState(shippingInfo.country || "Canada");
   const [state, setProv] = useState(shippingInfo.state);
   const [city, setCity] = useState(shippingInfo.city);
   const [postalCode, setPostalCode] = useState(shippingInfo.postalCode);

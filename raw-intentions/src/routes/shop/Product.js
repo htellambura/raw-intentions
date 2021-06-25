@@ -26,7 +26,11 @@ function Product(props) {
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState("");
   const addToCartHandler = () => {
-    props.history.push(`/cart/${productID}?qty=${quantity}&size=${size}`);
+    if (size) {
+      props.history.push(`/cart/${productID}?qty=${quantity}&size=${size}`);
+    } else {
+      alert("Please select a size.");
+    }
   };
 
   // toggle popup widget for size chart
@@ -50,7 +54,6 @@ function Product(props) {
             <h3>${product.price}</h3>
           </div>
           <form className="product-size">
-            <Prompt when={size == ""} message={"Please select a size"} />
             <select
               className="ring-size"
               onChange={(e) => setSize(e.target.value)}

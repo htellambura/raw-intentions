@@ -22,8 +22,8 @@ export default function Cart(props) {
     }
   }, [dispatch, productID, quantity, size]);
 
-  const removeItemFromCart = (productID) => {
-    dispatch(removeFromCart(productID));
+  const removeItemFromCart = (productID, size) => {
+    dispatch(removeFromCart(productID, size));
   };
   const totalQuantity = (obj) =>
     Object.values(obj).reduce((a, b) => a + b.quantity, 0);
@@ -60,18 +60,22 @@ export default function Cart(props) {
                     type="number"
                     name="product-quantity"
                     min="1"
-                    max="15"
+                    max="20"
                     value={item.quantity}
                     onChange={(e) =>
                       dispatch(
-                        addToCart(item.product, Number(e.target.value), size)
+                        addToCart(
+                          item.product,
+                          Number(e.target.value),
+                          item.size
+                        )
                       )
                     }
                     required
                   />
                   <button
                     className="cart-item-remove"
-                    onClick={() => removeItemFromCart(item.product)}
+                    onClick={() => removeItemFromCart(item.product, item.size)}
                   >
                     Remove
                   </button>

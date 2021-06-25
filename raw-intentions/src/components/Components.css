@@ -16,8 +16,8 @@
   grid-template-rows: 1fr;
   height: 100%;
   justify-content: center;
-  overflow: auto;
   width: 100%;
+  overflow-y: hidden;
 }
 
 /* header content */

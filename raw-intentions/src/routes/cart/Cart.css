@@ -101,7 +101,7 @@
 .cart-summary {
   background-color: #dedede;
   display: grid;
-  height: auto;
+  height: 60vh;
   padding: 1rem;
   text-align: center;
   text-transform: uppercase;
