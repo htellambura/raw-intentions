@@ -62,7 +62,6 @@
   align-self: flex-start;
   font-size: 1.3rem;
   font-weight: 300;
-  justify-self: right;
   text-transform: uppercase;
 }
 
@@ -87,8 +86,10 @@
 /* text inside each item in cart */
 .cart-item-info {
   align-items: baseline;
+  text-align: left;
   display: flex;
   flex-direction: column;
+  max-width: 65%;
 }
 
 .cart-item-info p {

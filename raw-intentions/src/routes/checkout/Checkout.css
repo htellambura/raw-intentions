@@ -166,7 +166,8 @@
 
 .confirmation-shipping-info table {
   font-size: 1.1rem;
-  margin: 0rem 1rem 1rem 1rem;
+  width: 90%;
+  margin: auto auto 1rem auto;
 }
 
 .confirmation-form-info {
@@ -398,5 +399,47 @@
   .confirmation .cart-summary-details {
     font-size: 1.1rem;
     padding: 0.7rem;
+  }
+
+  /* payment information page */
+
+  .payment {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    text-align: left;
+    width: 92vw;
+  }
+  .payment h1 {
+    align-self: center;
+    margin: 0.5rem;
+  }
+
+  .payment-info {
+    background-color: #ffffff;
+    font-family: "Oswald";
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    padding: 0.9rem;
+  }
+
+  .e-transfer-question {
+    text-align: center;
+    margin: 1rem;
+    color: #7dde82;
+  }
+  .payment-info span {
+    background-color: #f3f3f3;
+  }
+  .payment-info li {
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+
+  .payment-info .disclaimer {
+    font-size: 1rem;
   }
 }

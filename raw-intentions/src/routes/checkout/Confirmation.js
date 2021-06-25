@@ -23,6 +23,7 @@ export default function Confirmation(props) {
     var templateParams = {
       cartItems: JSON.stringify(cartItems),
       ...shippingInfo,
+      total: `$${totalPrice(cartItems).toFixed(2)}`,
     };
     emailjs
       .send(
