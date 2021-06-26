@@ -1,6 +1,16 @@
 const data = {
   products: [
     {
+      category: "other",
+      description:
+        "Carry around your stones or anything else! This hand painted bag completes any outfit :)\n\rDimensions: 13.5x13.5x3.5in",
+      image: "/products/SadStoneGirlToteBag.jpg",
+      name: "Sad Stone Girl Tote Bag",
+      price: 24,
+      tags: "other",
+      type: "Tote Bag",
+    },
+    {
       category: "necklaces",
       description:
         "The Neutrals collection is perfect for absolutely anyone :)\n\rPendant: lava chip wrapped with a silver skull.",
