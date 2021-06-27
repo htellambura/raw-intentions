@@ -13,6 +13,56 @@ const data = {
     {
       category: "necklaces",
       description:
+        "Summer is finally here and that means it's time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \nStone: Blue opal stone bead",
+      image: "/products/LunaNecklace.JPEG",
+      name: "Luna Necklace",
+      price: 16,
+      tags: "womens,silver,colour,gold,singlestone,",
+      type: "Welcome to Summer",
+    },
+    {
+      category: "necklaces",
+      description:
+        "Summer is finally here and that means it's time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \nStone: Blue opal stone bead",
+      image: "/products/Stella_LunaSet.JPEG",
+      name: "Stella&Luna Bestie Set",
+      price: 26,
+      tags: "womens,silver,gold,colour,singlestone,",
+      type: "Welcome to Summer",
+    },
+    {
+      category: "necklaces",
+      description:
+        "Summer is finally here and that means it's time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \n\rStone: Yellow jade stone bead",
+      image: "/products/StellaNecklace.JPEG",
+      name: "Stella Necklace",
+      price: 16,
+      tags: "womens,gold,colour,silver,singlestone",
+      type: "Welcome to Summer",
+    },
+    {
+      category: "necklaces",
+      description:
+        "Summer is finally here and that means it's time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \n\rStone: Yellow jade",
+      image: "/products/SunshineNeclace.JPEG",
+      name: "Sunshine Necklace",
+      price: 22,
+      tags: "womens,silver,colour,gold,singlestone,",
+      type: "Welcome to Summer",
+    },
+    {
+      category: "earrings",
+      description:
+        "Summer is finally here and that means its time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \n\rStone: \nYellow agate with silver sun\nAquamarine chip with Silver Moon",
+      image: "/products/Stella_LunaEarrings.JPEG",
+      name: "Stella&Luna Earrings",
+      price: 25,
+      tags: "womens,silver,colour,singlestone,",
+      type: "Welcome to Summer",
+    },
+    {
+      category: "necklaces",
+      description:
         "The Neutrals collection is perfect for absolutely anyone :)\n\rPendant: lava chip wrapped with a silver skull.",
       image: "/products/SkelloChipNecklace.JPEG",
       name: "Skello Chip Necklace",
@@ -81,16 +131,7 @@ const data = {
       tags: "genderless,mens,black,silver,singlestone,",
       type: "The Neutrals",
     },
-    {
-      category: "necklaces",
-      description:
-        "Summer is finally here and that means it's time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \nStone: Blue opal stone bead",
-      image: "/products/LunaNecklace.JPEG",
-      name: "Luna Necklace",
-      price: 16,
-      tags: "womens,silver,colour,gold,singlestone,",
-      type: "Welcome to Summer",
-    },
+
     {
       category: "necklaces",
       description:
@@ -191,36 +232,7 @@ const data = {
       tags: "genderless,womens,mens,black,silver,",
       type: "The Neutrals",
     },
-    {
-      category: "necklaces",
-      description:
-        "Summer is finally here and that means it's time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \nStone: Blue opal stone bead",
-      image: "/products/Stella_LunaSet.JPEG",
-      name: "Stella&Luna Bestie Set",
-      price: 26,
-      tags: "womens,silver,gold,colour,singlestone,",
-      type: "Welcome to Summer",
-    },
-    {
-      category: "necklaces",
-      description:
-        "Summer is finally here and that means it's time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \n\rStone: Yellow jade stone bead",
-      image: "/products/StellaNecklace.JPEG",
-      name: "Stella Necklace",
-      price: 16,
-      tags: "womens,gold,colour,silver,singlestone",
-      type: "Welcome to Summer",
-    },
-    {
-      category: "necklaces",
-      description:
-        "Summer is finally here and that means it's time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \n\rStone: Yellow jade",
-      image: "/products/SunshineNeclace.JPEG",
-      name: "Sunshine Necklace",
-      price: 22,
-      tags: "womens,silver,colour,gold,singlestone,",
-      type: "Welcome to Summer",
-    },
+
     {
       category: "bracelets",
       description:
@@ -321,16 +333,7 @@ const data = {
       tags: "genderless,womens,gold,colour,singlestone,",
       type: "The Basics",
     },
-    {
-      category: "earrings",
-      description:
-        "Summer is finally here and that means its time to update the closet! Have fun in the heat and look cute while doing it - Welcome to Summer :) \n\rStone: \nYellow agate with silver sun\nAquamarine chip with Silver Moon",
-      image: "/products/Stella_LunaEarrings.JPEG",
-      name: "Stella&Luna Earrings",
-      price: 25,
-      tags: "womens,silver,colour,singlestone,",
-      type: "Welcome to Summer",
-    },
+
     {
       category: "earings",
       description:
