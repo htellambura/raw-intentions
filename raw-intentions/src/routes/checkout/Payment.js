@@ -1,5 +1,5 @@
-import React from "react";
 import { useSelector } from "react-redux";
+import React from "react";
 
 export default function Payment() {
   const cart = useSelector((state) => state.cart);

@@ -1,4 +1,6 @@
-/* faq, contact us and about us pages */
+/** faq, contact us and about us components **/
+
+/* all information components */
 
 /* main title */
 
@@ -35,8 +37,6 @@
 #title-4 {
   color: #949494;
 }
-
-/* information class for all pages */
 
 .information section {
   align-items: center;
@@ -88,28 +88,26 @@
   list-style-type: initial;
 }
 
-/* about us page */
+/** about us component **/
 
 .about-us {
   height: 100%;
   width: 100%;
 }
 
-/* about us title */
+/* about us content */
 
 #about-us-title {
   -webkit-text-stroke: 0.001rem #77bb79;
   color: #cef792;
 }
 
-/* about us page content */
-
 .about-us-content {
   display: grid;
   grid-template-rows: 1fr 4fr;
 }
 
-/* contact us page */
+/** contact us component **/
 
 #contact-us-title {
   -webkit-text-stroke: 0.001rem #cef792;
@@ -122,14 +120,14 @@
   align-items: center;
 }
 
-/* faq page */
+/** faq component **/
+
+/* faq page content */
 
 #faq-title {
   -webkit-text-stroke: 0.001rem #cef792;
   color: #ebadf9;
 }
-
-/* faq page content */
 
 .faq-content section {
   width: 70%;
@@ -178,16 +176,14 @@
   margin-bottom: 5rem;
 }
 
-/* shipping page */
+/** shipping component **/
 
-/* shipping page title */
+/* shipping content */
 
 #shipping-title {
   color: #cef792;
   -webkit-text-stroke: 0.001rem #ebadf9;
 }
-
-/* shipping page content */
 
 /* shipping content text before the table */
 
@@ -232,8 +228,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  /* faq, contact us and about us pages */
-
   .title h1 {
     font-size: 5rem;
   }
@@ -256,8 +250,6 @@
     font-size: 1.3rem;
   }
 
-  /* shipping page */
-
   .shipping-text h2 {
     margin: 2rem;
     font-size: 2rem;
@@ -277,8 +269,6 @@
   #shipping-table td {
     font-size: 1.1rem;
   }
-
-  /* faq page */
 
   .faq section * {
     max-width: none;

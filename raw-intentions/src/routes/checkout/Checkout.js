@@ -1,9 +1,8 @@
-import React from "react";
-
-import ShippingInfoForm from "./ShippingInfoForm";
-import Payment from "./Payment";
 import Confirmation from "./Confirmation";
 import Message from "../../components/Message";
+import Payment from "./Payment";
+import React from "react";
+import ShippingInfoForm from "./ShippingInfoForm";
 
 export default function Checkout(props) {
   const checkoutStep = props.match.params.step;

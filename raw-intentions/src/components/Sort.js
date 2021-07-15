@@ -1,7 +1,7 @@
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
 import { SORT_OPTIONS } from "../constants/constants";
+import React, { useState } from "react";
 
 export default function Sort(props) {
   const [isOpen, setOpen] = useState(false);

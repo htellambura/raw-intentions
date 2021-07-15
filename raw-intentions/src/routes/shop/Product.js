@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Prompt } from "react-router-dom";
-
-import Message from "../../components/Message";
-import Popup from "../../components/Popup";
-
 import "./Product.css";
 import { detailProduct } from "../../actions/productActions";
-
 import { SIZES } from "../../constants/constants";
-import SIZE_CHART_IMAGE from "../../assets/size-chart.png";
+import { useDispatch, useSelector } from "react-redux";
+import Message from "../../components/Message";
+import Popup from "../../components/Popup";
+import React, { useEffect, useState } from "react";
+import SIZE_CHART_IMAGE from "../../assets/SizeChart.png";
 
 function Product(props) {
   // get product data from backend

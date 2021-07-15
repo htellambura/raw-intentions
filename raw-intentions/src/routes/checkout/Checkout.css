@@ -1,6 +1,6 @@
-/* checkout pages */
+/** components in checkout steps **/
 
-/* main title */
+/* all checkout components */
 
 .checkout {
   display: flex;
@@ -41,9 +41,7 @@
   color: #b1d380;
 }
 
-/* first step of checkout: shipping info form */
-
-/* shipping info form page */
+/** shipping info form component **/
 
 .shipping-info {
   display: flex;
@@ -123,7 +121,8 @@
   grid-column-end: 3;
   grid-column-start: 1;
 }
-/* second step of checkout: confirmation */
+
+/** checkout confirmation component **/
 
 .confirmation {
   width: 65vw;
@@ -131,7 +130,7 @@
   grid-template-columns: 1fr;
 }
 
-/* confirmation page section for user's shipping info */
+/* checkout confirmation content */
 
 .confirmation-shipping-info {
   background-color: #dedede;
@@ -245,9 +244,7 @@
   margin: 3rem;
 }
 
-/* third step of checkout: payment */
-
-/* payment information page */
+/** checkout payment component **/
 
 .payment {
   background-color: #dedede;
@@ -258,6 +255,9 @@
   text-align: left;
   width: 45vw;
 }
+
+/* checkout payment content */
+
 .payment h1 {
   align-self: center;
 }
@@ -276,9 +276,11 @@
   margin: 1rem;
   color: #7dde82;
 }
+
 .payment-info span {
   background-color: #f3f3f3;
 }
+
 .payment-info li {
   margin: 1rem 1rem 1rem 2rem;
 }

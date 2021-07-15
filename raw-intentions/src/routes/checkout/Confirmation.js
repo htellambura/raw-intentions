@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
-import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import emailjs from "emailjs-com";
 import Message from "../../components/Message";
+import React, { useState } from "react";
 
 export default function Confirmation(props) {
   const cart = useSelector((state) => state.cart);

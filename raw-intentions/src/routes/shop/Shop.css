@@ -1,4 +1,4 @@
-/* shop page */
+/** shop component **/
 
 .shop {
   display: grid;
@@ -6,7 +6,9 @@
   width: 100%;
   margin: auto;
 }
-/* shop page title, links, sorting and filtering */
+
+/* shop content */
+
 .shop nav {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -16,7 +18,7 @@
   display: flex;
   font-size: 3rem;
   justify-content: space-evenly;
-  margin: 2rem 10rem 2rem 10rem; /* margin measurements go top right bottom left*/
+  margin: 2rem 10rem 2rem 10rem;
 }
 
 #shop-title {
@@ -42,7 +44,7 @@
 }
 .shop-product-image {
   box-shadow: 1rem 1rem 0rem 0rem #ebadf9;
-  height: auto; /* implement dynamic sizing of product images */
+  height: auto;
   margin-bottom: 1rem;
   width: 15vw;
 }
@@ -60,14 +62,10 @@
 }
 
 @media only screen and (max-width: 768px) {
-  /* shop page */
-
   .shop {
     display: flex;
     flex-direction: column;
   }
-
-  /* shop page title, links, sorting and filtering */
 
   .shop .links {
     display: flex;
@@ -75,10 +73,8 @@
     justify-content: space-around;
     align-items: center;
     font-size: 2rem;
-    margin: 1rem; /* margin measurements go top right bottom left*/
+    margin: 1rem;
   }
-
-  /* displaying individual products in grid */
 
   .shop-products {
     margin: 0rem;
@@ -88,10 +84,12 @@
   .shop-products li {
     margin: 0rem 1.5rem 2rem 1rem;
   }
+
   .shop-products ul:first-child,
   .shop-products ul:nth-child(2) {
     margin-top: 2rem;
   }
+
   .shop-product-image {
     box-shadow: 0.5rem 0.5rem 0rem 0rem #ebadf9;
     height: auto;

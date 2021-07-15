@@ -1,8 +1,8 @@
-import React from "react";
 import { Slide } from "react-slideshow-image";
-import Neutrals from ".././assets/slideshow/neutrals.png";
-import Basics from ".././assets/slideshow/basics.png";
-import Summer from ".././assets/slideshow/welcome-to-summer.png";
+import Basics from ".././assets/slideshow/Basics.png";
+import Neutrals from ".././assets/slideshow/Neutrals.png";
+import React from "react";
+import Summer from ".././assets/slideshow/WelcomeToSummer.png";
 
 const images = [Neutrals, Basics, Summer];
 const properties = {

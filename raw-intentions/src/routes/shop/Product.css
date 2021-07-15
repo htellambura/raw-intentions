@@ -1,13 +1,15 @@
-/* product page */
+/** product component **/
+
 .product {
-  width: 60vw;
-  margin: auto;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: 1fr auto 1fr auto;
+  margin: auto;
+  width: 60vw;
 }
 
-/* product image and card */
+/* product content */
+
 .product-image {
   grid-column: 1;
   grid-row-end: 6;
@@ -15,13 +17,11 @@
   margin: 2rem 1rem 3.5rem 1rem;
 }
 
-/* WILL NEED TO IMPLEMENT DYNAMIC SIZING */
-
 .product-image img {
-  max-height: 60vh;
-  width: auto;
   box-shadow: 1.5rem 1.5rem 0rem 0rem #cef792;
   margin-right: 3rem;
+  max-height: 60vh;
+  width: auto;
 }
 
 /* product title and type */
@@ -168,9 +168,7 @@
   background: #797979;
 }
 
-/* layout changes for smaller screens */
 @media only screen and (max-width: 768px) {
-  /* product page */
   .product {
     width: 100%;
     display: grid;
@@ -178,14 +176,11 @@
     grid-template-rows: repeat(5, auto);
   }
 
-  /* product image and card */
   .product-image {
     grid-column: 1;
     grid-row: 1;
     margin: 0rem;
   }
-
-  /* WILL NEED TO IMPLEMENT DYNAMIC SIZING */
 
   .product-image img {
     height: 100%;
@@ -193,7 +188,6 @@
     box-shadow: none;
   }
 
-  /* product title and type */
   .product-title {
     display: grid;
     grid-column: 1;
@@ -221,7 +215,6 @@
     grid-row: 2;
   }
 
-  /* product size selection*/
   .product-size {
     grid-column: 1;
     grid-row: 3;
@@ -234,8 +227,6 @@
     height: 2.5rem;
     padding: 0.1rem;
   }
-
-  /* user chooses product quantity and adds to cart */
 
   .product-add {
     flex-direction: row;
@@ -268,13 +259,13 @@
     width: 100%;
   }
 
-  /* product description and details */
   .product-description {
     font-size: 1.2rem;
     grid-column: 1;
     grid-row: 5;
     margin: 1rem;
   }
+
   .product-description h1 {
     color: #cef792;
     font-family: "Six Caps", sans-serif;

@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-
-import Message from "../../components/Message";
-
 import "./Shop.css";
 import { listProducts } from "../../actions/productActions";
+import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import Filter from "../../components/Filter";
+import Message from "../../components/Message";
+import React, { useEffect, useState } from "react";
 import Sort from "../../components/Sort";
 
 function Shop(props) {

@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Slideshow from "../../components/Slideshow";
-import CD from "../../assets/home/cd-gif.gif";
-import Saturn from "../../assets/home/saturn-gif.gif";
-import PaintBeads from "../../assets/home/paint-beads.png";
-import MSPaint from "../../assets/home/ms-paint.png";
+import CD from "../../assets/home/CDGif.gif";
+import Saturn from "../../assets/home/SaturnGif.gif";
+import PaintBeads from "../../assets/home/MSPaintRings.png";
+import MSPaint from "../../assets/home/MSPaintCustoms.png";
 import "./Home.css";
 
 const Home = () => {

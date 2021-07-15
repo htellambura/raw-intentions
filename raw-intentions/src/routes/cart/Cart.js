@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-
-import { addToCart, removeFromCart } from "../../actions/cartActions";
-import Message from "../../components/Message";
 import "./Cart.css";
+import { addToCart, removeFromCart } from "../../actions/cartActions";
+import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import Message from "../../components/Message";
+import React, { useEffect } from "react";
 
 export default function Cart(props) {
   const dispatch = useDispatch();
@@ -16,6 +14,7 @@ export default function Cart(props) {
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+
   useEffect(() => {
     if (productID) {
       dispatch(addToCart(productID, quantity, size));

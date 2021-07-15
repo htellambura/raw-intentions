@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { saveShippingInfo } from "../../actions/cartActions";
-
 import { COUNTRIES } from "../../constants/constants";
+import { saveShippingInfo } from "../../actions/cartActions";
+import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
 
 import "./Checkout.css";
 

@@ -1,7 +1,6 @@
-import React from "react";
-
-import Message from "../../components/Message";
 import "./Customs.css";
+import Message from "../../components/Message";
+import React from "react";
 
 export default function Customs() {
   return (
