@@ -5,7 +5,7 @@ export default function Payment() {
   const cart = useSelector((state) => state.cart);
   const { cartItems, shippingInfo } = cart;
   const totalPrice = (obj) =>
-    Object.values(obj).reduce((a, b) => a + b.quantity * b.price, 0);
+    Object.values(obj).reduce((a, b) => a + b.quantity * b.price, 0) + 4;
 
   return (
     <div className="payment">

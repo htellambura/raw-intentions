@@ -11,7 +11,7 @@ export default function Confirmation(props) {
   const totalQuantity = (obj) =>
     Object.values(obj).reduce((a, b) => a + b.quantity, 0);
   const totalPrice = (obj) =>
-    Object.values(obj).reduce((a, b) => a + b.quantity * b.price, 0);
+    Object.values(obj).reduce((a, b) => a + b.quantity * b.price, 0) + 4;
 
   const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;

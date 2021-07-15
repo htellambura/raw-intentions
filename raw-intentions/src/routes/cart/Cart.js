@@ -28,7 +28,7 @@ export default function Cart(props) {
   const totalQuantity = (obj) =>
     Object.values(obj).reduce((a, b) => a + b.quantity, 0);
   const totalPrice = (obj) =>
-    Object.values(obj).reduce((a, b) => a + b.quantity * b.price, 0);
+    Object.values(obj).reduce((a, b) => a + b.quantity * b.price, 0) + 4;
 
   return (
     <div>
